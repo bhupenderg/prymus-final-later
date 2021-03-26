@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="/css/header_updated_n.css">
+    <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <link rel="stylesheet" href="/css/seo.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <title>PRYMUS</title>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+</head>
+<body>
+
+    <% if (user) { %>
+        <%- include ('includes/header_updated_s.ejs') %>     
+    <% } else { %>
+        <div class="header-main">
+            <%- include ('includes/header_updated_n.ejs') %>
+        </div>     
+    
+    <% } %>
+
+
+
+<!-- mobile nav starts  -->
+
+<% if (user) { %>
+<div class="mobile-header-main">
+  <div class="mobile-top-header">
+      <div class="mobile-logo-container">
+          <img src="/images/prymus.png" alt="prymus-logo" class="logo">
+      </div>
+
+      <div class="mobile-nav-logo">
+       <img src="/images/mobile-nav.png" alt="prymus-logo" class="logo">
+      </div>
+
+      <div class="mobile-navbar">
+          <div class="mobile-nav-items mob-hidden">
+           <ul class="nav-items">
+               <li class="nav-item">
+                   <a href="#home" class="item">Home</a>
+               </li>
+               <!-- <li class="nav-item">
+                   <a href="index.ejs/#about" class="item">About</a>
+               </li> -->
+               <li class="nav-item">
+                   <a href="#" class="item">Projects</a>
+               </li>
+               <li class="nav-item">
+                   <a href="/webdesignanddevelopment" class="item">Web</a>
+               </li>
+               <li class="nav-item">
+                 <a href="seo" class="item">SEO</a>
+             </li>
+             <li class="nav-item">
+               <a href="smo" class="item">SMO</a>
+             </li>
+             <li class="nav-item">
+               <a href="/myaccount" class="item">My Account</a>
+             </li>
+             <li class="nav-item">
+               <a href="#" class="item chat-header">Chat Us</a>
+             </li>
+               <li>
+                   <form action="/logout" method="POST">
+                       <input type="submit" value="Logout">
+                   </form>
+               </li>
+           </ul>
+          </div>
+          
+      </div>
+  </div>
+</div>     
+<% } else { %>
+   <div class="mobile-header-main">
+       <div class="mobile-top-header">
+           <div class="mobile-logo-container">
+               <img src="/images/prymus.png" alt="prymus-logo" class="logo">
+           </div>
+
+           <div class="mobile-nav-logo">
+               <img src="/images/mobile-nav.png" alt="prymus-logo" class="logo">
+              </div>
+
+           <div class="mobile-navbar">
+               
+               <div class="mobile-nav-items mob-hidden">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="#home" class="item">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="index.ejs/#about" class="item">About</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="#" class="item">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/webdesignanddevelopment" class="item">Web</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="seo" class="item">SEO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="smo" class="item">SMO</a>
+                  </li>
+
+                  <li class="nav-item">
+                   <a href="/connect-with-us" class="item connect-btn">Connect With Us</a>
+               </li>
+                  
+                </ul>
+               </div>
+               
+           </div>
+       </div>
+    </div>
+
+<% } %>
+
+
+    <!-- contact heading -->
+
+    <div class="form-contact">
+        <div class="form-contact-heading">
+            <h1>tell us about your project</h1>
+        </div>
+        <div class="contact-form">
+            <form action="mailto:i.bhupendr@gmail.com" method="POST" enctype="multipart/form-data">
+
+                <div class="general-info-1 general-details">
+                    <input type="text" name="name" class="name" placeholder="Name">
+                    <input type="email" name="email" class="email" placeholder="Email">
+                    <input type="tel" name="wahtsapp_no" class="whatsapp" placeholder="Whatsapp No.">
+                </div>
+                
+                <div class="general-info-2 general-details">
+                    <input type="text" name="company_name" class="company_name" placeholder="Your Company Name">
+                    <input type="text" name="website" class="website" placeholder="Company Website">
+                    <input type="text" name="position" class="position" placeholder="Position">
+                </div>    
+                <div class="general-info-3 general-details">
+                    <input type="text" name="city" class="city" placeholder="City">
+                    <input type="text" name="state" class="state" placeholder="State">
+                    <input type="text" name="country" class="country" placeholder="Country">
+                </div>
+                <div class="general-info-4 general-details">
+                    <!-- <input type="range" min="1" max="100" value="50" class="slider" id="myRange" placeholder="Budget"> -->
+                <textarea name="requirement" class="requirement" cols="30" rows="10" placeholder="Requirement"></textarea>
+                </div>
+                <div class="general-submit">
+                    <input type="submit" name="submit" value="Submit" class="general-submit-btn">
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+
+    <!-- container-2 -->
+
+    <div class="design-campaign">
+        <h1>OR</h1>
+        <a href="/campaignregister"><h1>you can design your own campaign here 👍</h1></a>
+    </div>
+    
+    <!-- footer -->
+
+
+    <%- include('footer.ejs') %>
+    
+
+    
+</body>

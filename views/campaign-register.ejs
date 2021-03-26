@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+
+     <link rel="stylesheet" href="/css/header_updated_n.css">
+    <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/campaign-register.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <link type="text/css" rel="stylesheet" href="css/tail.select-default.css" />
+    
+    <title>PRYMUS</title>
+
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+
+    
+</head>
+<body>
+
+    <div class="header-main">
+        <% if (user) { %>
+            <%- include ('includes/header_updated_s.ejs') %>     
+        <% } else { %>
+            <div class="header-main">
+                <%- include ('includes/header_updated_n.ejs') %>
+            </div>     
+        
+        <% } %>
+    </div>     
+
+
+    <!-- contact heading -->
+
+    <div class="form-contact">
+        <div class="form-contact-heading">
+            <h1>tell us about your project</h1>
+        </div>
+        <div class="contact-form">
+            <form action="/campaignregister" method="POST" class="campaign-form" enctype="multipart/form-data">
+
+                <input type="tel" name="whatsapp_no" class="whatsapp_no" placeholder="Whatsapp No">
+                <input type="text" name="company_name" class="company_name" placeholder= "Company Name">
+                <input type="text" name="website" class="website" placeholder="Company Website">
+                <input type="text" name="position" class="position" placeholder=" Position">
+                <label for="Category">Business Category:</label>
+                <select class="form-control" name="category" style="width: 21%; height: 5%">
+                    <option value="Doctor">Doctor</option>
+                    <option value="Shop Owner">Shop Owner</option>
+                    <option value="Dentist">Dentist</option>
+                    <option value="Businessman">Businessman</option>
+                    <option value="Book Seller">Book Seller</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="I.T Services">I.T Services</option>
+                    
+                  </select>
+
+                  <label for="Category">Select your target country:</label>
+                  <select name="country-select" class="country-select" id="country-select" style="width: 21%; height: 5%">
+                    <option value="India" class="country">India</option>
+                </select>
+
+                <!-- Multi select starts -->
+
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <select multiple id="select">
+                                <optgroup label="Andhra Pradesh">
+                                        
+                                        <option>Andhra Pradesh</option>
+                                        <option value="Adoni (Andhra Pradesh)">Adoni (Andhra Pradesh)</option>
+            <option value="Amaravati (Andhra Pradesh)">Amaravati (Andhra Pradesh)</option>
+            <option value="Anantapur (Andhra Pradesh)">Anantapur (Andhra Pradesh)</option>
+            <option value="Bhimavaram (Andhra Pradesh)">Bhimavaram (Andhra Pradesh)</option>
+            <option value="Chittoor (Andhra Pradesh)">Chittoor (Andhra Pradesh)</option>
+            <option value="Dharmavaram (Andhra Pradesh)">Dharmavaram (Andhra Pradesh)</option>
+            <option value="Eluru (Andhra Pradesh)">Eluru (Andhra Pradesh)</option>
+            <option value="Gudivada (Andhra Pradesh)">Gudivada (Andhra Pradesh)</option>
+            <option value="Guntakal (Andhra Pradesh)">Guntakal (Andhra Pradesh)</option>
+            <option value="Guntur (Andhra Pradesh)">Guntur (Andhra Pradesh)</option>
+            <option value="Hindupur (Andhra Pradesh)">Hindupur (Andhra Pradesh)</option>
+            <option value="Kadapa (Andhra Pradesh)">Kadapa (Andhra Pradesh)</option>
+            <option value="Kakinada (Andhra Pradesh)">Kakinada (Andhra Pradesh)</option>
+            <option value="Kavali (Andhra Pradesh)">Kavali (Andhra Pradesh)</option>
+            <option value="Kurnool (Andhra Pradesh)">Kurnool (Andhra Pradesh)</option>
+            <option value="Machilipatnam (Andhra Pradesh)">Machilipatnam (Andhra Pradesh)</option>
+            <option value="Madanapalle (Andhra Pradesh)">Madanapalle (Andhra Pradesh)</option>
+            <option value="Nandyal (Andhra Pradesh)">Nandyal (Andhra Pradesh)</option>
+            <option value="Narasaraopet (Andhra Pradesh)">Narasaraopet (Andhra Pradesh)</option>
+            <option value="Nellore (Andhra Pradesh)">Nellore (Andhra Pradesh)</option>
+            <option value="Ongole (Andhra Pradesh)">Ongole (Andhra Pradesh)</option>
+            <option value="Proddatur (Andhra Pradesh)">Proddatur (Andhra Pradesh)</option>
+            <option value="Rajahmundry (Andhra Pradesh)">Rajahmundry (Andhra Pradesh)</option>
+            <option value="Srikakulam (Andhra Pradesh)">Srikakulam (Andhra Pradesh)</option>
+            <option value="Tadepalligudem (Andhra Pradesh)">Tadepalligudem (Andhra Pradesh)</option>
+            <option value="Tadipatri (Andhra Pradesh)">Tadipatri (Andhra Pradesh)</option>
+            <option value="Tenali (Andhra Pradesh)">Tenali (Andhra Pradesh)</option>
+            <option value="Tirupati (Andhra Pradesh)">Tirupati (Andhra Pradesh)</option>
+            <option value="Vijayanagaram (Andhra Pradesh)">Vijayanagaram (Andhra Pradesh)</option>
+            <option value="Vijayawada (Andhra Pradesh)">Vijayawada (Andhra Pradesh)</option>
+            <option value="Visakhapatnam (Andhra Pradesh)">Visakhapatnam (Andhra Pradesh)</option>
+            
+            
+                                
+                                </optgroup>
+            
+            
+                                <optgroup label="Assam">
+                                <option>Assam</option>	
+                                <option value="Bongaigaon (Assam)">Bongaigaon (Assam)</option>
+                                <option value="Dibrugarh (Assam)">Dibrugarh (Assam)</option>
+                                <option value="Guwahati (Assam)">Guwahati (Assam)</option>
+                                <option value="Jorhat (Assam)">Jorhat (Assam)</option>
+                                <option value="Nagaon (Assam)">Nagaon (Assam)</option>
+                                <option value="Silchar (Assam)">Silchar (Assam)</option>
+                                <option value="Tezpur (Assam)">Tezpur (Assam)</option>
+                                <option value="Tinsukia (Assam)">Tinsukia (Assam)</option>
+            
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Bihar">
+                                <option>Bihar</option>	
+                                <option value="Arrah (Bihar)">Arrah (Bihar)</option>
+                                <option value="Aurangabad (Bihar)">Aurangabad (Bihar)</option>
+                                <option value="Begusarai (Bihar)">Begusarai (Bihar)</option>
+                                <option value="Bettiah (Bihar)">Bettiah (Bihar)</option>
+                                <option value="Bhagalpur (Bihar)">Bhagalpur (Bihar)</option>
+                                <option value="Bihar Sharif (Bihar)">Bihar Sharif (Bihar)</option>
+                                <option value="Buxar (Bihar)">Buxar (Bihar)</option>
+                                <option value="Chapra (Bihar)">Chapra (Bihar)</option>
+                                <option value="Danapur (Bihar)">Danapur (Bihar)</option>
+                                <option value="Darbhanga (Bihar)">Darbhanga (Bihar)</option>
+                                <option value="Dehri (Bihar)">Dehri (Bihar)</option>
+                                <option value="Gaya (Bihar)">Gaya (Bihar)</option>
+                                <option value="Hajipur (Bihar)">Hajipur (Bihar)</option>
+                                <option value="Jamalpur (Bihar)">Jamalpur (Bihar)</option>
+                                <option value="Jehanabad (Bihar)">Jehanabad (Bihar)</option>
+                                <option value="Katihar (Bihar)">Katihar (Bihar)</option>
+                                <option value="Kishanganj (Bihar)">Kishanganj (Bihar)</option>
+                                <option value="Motihari (Bihar)">Motihari (Bihar)</option>
+                                <option value="Munger (Bihar)">Munger (Bihar)</option>
+                                <option value="Muzaffarpur (Bihar)">Muzaffarpur (Bihar)</option>
+                                <option value="Patna (Bihar)">Patna (Bihar)</option>
+                                <option value="Purnia (Bihar)">Purnia (Bihar)</option>
+                                <option value="Saharsa (Bihar)">Saharsa (Bihar)</option>
+                                <option value="Sasaram (Bihar)">Sasaram (Bihar)</option>
+                                <option value="Siwan (Bihar)">Siwan (Bihar)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Chhattisgarh">
+                                <option>Chhattisgarh</option>
+                                <option value="Bhilai (Chhattisgarh)">Bhilai (Chhattisgarh)</option>
+                                <option value="Bilaspur (Chhattisgarh)">Bilaspur (Chhattisgarh)</option>
+                                <option value="Durg (Chhattisgarh)">Durg (Chhattisgarh)</option>
+                                <option value="Korba (Chhattisgarh)">Korba (Chhattisgarh)</option>
+                                <option value="Raipur (Chhattisgarh)">Raipur (Chhattisgarh)</option>
+            
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Delhi">
+                                <option>Delhi</option>	
+                        <option value="Bhalswa Jahangir Pur (Delhi)">Bhalswa Jahangir Pur (Delhi)</option>
+                                <option value="Delhi (Delhi)">Delhi (Delhi)</option>
+                                <option value="Karawal Nagar (Delhi)">Karawal Nagar (Delhi)</option>
+                        <option value="Kirari Suleman Nagar (Delhi)">Kirari Suleman Nagar (Delhi)<option>
+                                <option value="Nangloi Jat (Delhi)">Nangloi Jat (Delhi)</option>
+                                <option value="New Delhi (Delhi)">New Delhi (Delhi)</option>
+                                <option value="Sultan Pur Majra (Delhi)">Sultan Pur Majra (Delhi)</option>
+            
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Gujarat">
+                                    <option>Gujarat</option>	
+                                    <option value="Ahmedabad (Gujarat)">Ahmedabad (Gujarat)</option>
+                                    <option value="Anand (Gujarat)">Anand (Gujarat)</option>
+                                    <option value="Bhavnagar (Gujarat)">Bhavnagar (Gujarat)</option>
+                                    <option value="Gandhidham (Gujarat)">Gandhidham (Gujarat)</option>
+                                    <option value="Gandhinagar (Gujarat)">Gandhinagar (Gujarat)</option>
+                                    <option value="Jamnagar (Gujarat)">Jamnagar (Gujarat)</option>
+                                    <option value="Junagadh (Gujarat)">Junagadh (Gujarat)</option>
+                                    <option value="Mehsana (Gujarat)">Mehsana (Gujarat)</option>
+                                    <option value="Morbi (Gujarat)">Morbi (Gujarat)</option>
+                                    <option value="Nadiad (Gujarat)">Nadiad (Gujarat)</option>
+                                    <option value="Rajkot (Gujarat)">Rajkot (Gujarat)</option>
+                                    <option value="Surat (Gujarat)">Surat (Gujarat)</option>
+                    <option value="Surendranagar Dudhrej (Gujarat)">Surendranagar Dudhrej (Gujarat)</option>
+                                    <option value="Vadodara (Gujarat)">Vadodara (Gujarat)</option>
+            
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Haryana">
+                                    <option>Haryana</option>
+                                    <option value="Ambala (Haryana)">Ambala (Haryana)</option>
+                                    <option value="Bhiwani (Haryana)">Bhiwani (Haryana)</option>
+                                    <option value="Faridabad (Haryana)">Faridabad (Haryana)</option>
+                                    <option value="Gurgaon (Haryana)">Gurgaon (Haryana)</option>
+                                    <option value="Karnal (Haryana)">Karnal (Haryana)</option>
+                                    <option value="Panchkula (Haryana)">Panchkula (Haryana)</option>
+                                    <option value="Panipat (Haryana)">Panipat (Haryana)</option>
+                                    <option value="Rohtak (Haryana)">Rohtak (Haryana)</option>
+                                    <option value="Sirsa (Haryana)">Sirsa (Haryana)</option>
+                                    <option value="Sonipat (Haryana)">Sonipat (Haryana)</option>
+                                    <option value="Yamunanagar (Haryana)">Yamunanagar (Haryana)</option>
+            
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Himachal Pradesh">
+                                <option>Himachal Pradesh</option>	
+                                <option value="Shimla (Himachal Pradesh)">Shimla (Himachal Pradesh)</option>
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Jammu and Kashmir">
+                                <option>Jammu and Kashmir</option>	
+                                <option value="Jammu (Jammu and Kashmir)">Jammu (Jammu and Kashmir)</option>
+                        <option value="Srinagar (Jammu and Kashmir)">Srinagar (Jammu and Kashmir)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Jharkhand">
+                                <option>Jharkhand</option>	
+                                <option value="Bokaro (Jharkhand)">Bokaro (Jharkhand)</option>
+                                <option value="Deoghar (Jharkhand)">Deoghar (Jharkhand)</option>
+                                <option value="Dhanbad (Jharkhand)">Dhanbad (Jharkhand)</option>
+                                <option value="Giridih (Jharkhand)">Giridih (Jharkhand)</option>
+                                <option value="Hazaribagh (Jharkhand)">Hazaribagh (Jharkhand)</option>
+                                <option value="Jamshedpur (Jharkhand)">Jamshedpur (Jharkhand)</option>
+                                <option value="Mango (Jharkhand)">Mango (Jharkhand)</option>
+                                <option value="Medininagar (Jharkhand)">Medininagar (Jharkhand)</option>
+                                <option value="Phusro (Jharkhand)">Phusro (Jharkhand)</option>
+                                <option value="Ramgarh (Jharkhand)">Ramgarh (Jharkhand)</option>
+                                <option value="Ranchi (Jharkhand)">Ranchi (Jharkhand)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+            
+                                <optgroup label="Karnataka">
+                                <option>Karnataka</option>
+                                <option value="Bangalore (Karnataka)">Bangalore (Karnataka)</option>
+                                <option value="Belgaum (Karnataka)">Belgaum (Karnataka)</option>
+                                <option value="Bellary (Karnataka)">Bellary (Karnataka)</option>
+                                <option value="Bidar (Karnataka)">Bidar (Karnataka)</option>
+                                <option value="Bijapur (Karnataka)">Bijapur (Karnataka)</option>
+                                <option value="Davanagere (Karnataka)">Davanagere (Karnataka)</option>
+                                <option value="Gulbarga (Karnataka)">Gulbarga (Karnataka)</option>
+                                <option value="Hospet (Karnataka)">Hospet (Karnataka)</option>
+                                <option value="Hubli–Dharwad (Karnataka)">Hubli–Dharwad (Karnataka)</option>
+                                <option value="Mangalore (Karnataka)">Mangalore (Karnataka)</option>
+                                <option value="Mysore (Karnataka)">Mysore (Karnataka)</option>
+                                <option value="Raichur (Karnataka)">Raichur (Karnataka)</option>
+                                <option value="Shimoga (Karnataka)">Shimoga (Karnataka)</option>
+                                <option value="Tumkur (Karnataka)">Tumkur (Karnataka)</option>
+                                <option value="Udupi (Karnataka)">Udupi (Karnataka)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Kerala">
+                                <option>Kerala</option>	
+                                <option value="Alappuzha (Kerala)">Alappuzha (Kerala)</option>
+                                <option value="Kochi (Kerala)">Kochi (Kerala)</option>
+                                <option value="Kollam (Kerala)">Kollam (Kerala)</option>
+                                <option value="Kottayam (Kerala)">Kottayam (Kerala)</option>
+                                <option value="Kozhikode (Kerala)">Kozhikode (Kerala)</option>
+                            <option value="Thiruvananthapuram (Kerala)">Thiruvananthapuram (Kerala)</option>
+                                <option value="Thrissur (Kerala)">Thrissur (Kerala)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+            
+                                <optgroup label="Madhya Pradesh">
+                                <option>Madhya Pradesh</option>	
+                                <option value="Bhind (Madhya Pradesh)">Bhind (Madhya Pradesh)</option>
+                                <option value="Bhopal (Madhya Pradesh)">Bhopal (Madhya Pradesh)</option>
+                            <option value="Burhanpur (Madhya Pradesh)">Burhanpur (Madhya Pradesh)</option>
+                                <option value="Dewas (Madhya Pradesh)">Dewas (Madhya Pradesh)</option>
+                                <option value="Guna (Madhya Pradesh)">Guna (Madhya Pradesh)</option>
+                                <option value="Gwalior (Madhya Pradesh)">Gwalior (Madhya Pradesh)</option>
+                                <option value="Indore (Madhya Pradesh)">Indore (Madhya Pradesh)</option>
+                                <option value="Jabalpur (Madhya Pradesh)">Jabalpur (Madhya Pradesh)</option>
+                                <option value="Katni (Madhya Pradesh)">Katni (Madhya Pradesh)</option>
+                                <option value="Khandwa (Madhya Pradesh)">Khandwa (Madhya Pradesh)</option>
+                                <option value="Morena (Madhya Pradesh)">Morena (Madhya Pradesh)</option>
+                                <option value="Ratlam (Madhya Pradesh)">Ratlam (Madhya Pradesh)</option>
+                                <option value="Rewa (Madhya Pradesh)">Rewa (Madhya Pradesh)</option>
+                                <option value="Sagar (Madhya Pradesh)">Sagar (Madhya Pradesh)</option>
+                                <option value="Satna (Madhya Pradesh)">Satna (Madhya Pradesh)</option>
+                                <option value="Shivpuri (Madhya Pradesh)">Shivpuri (Madhya Pradesh)</option>
+                            <option value="Singrauli (Madhya Pradesh)">Singrauli (Madhya Pradesh)</option>
+                                <option value="Ujjain (Madhya Pradesh)">Ujjain (Madhya Pradesh)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Maharashtra">
+                                <option>Maharashtra</option>	
+                                <option value="Ahmednagar (Maharashtra)">Ahmednagar (Maharashtra)</option>
+                        <option value="Akola (Maharashtra)">Akola (Maharashtra)</option>
+                        <option value="Ambarnath (Maharashtra)">Ambarnath (Maharashtra)</option>
+                        <option value="Amravati (Maharashtra)">Amravati (Maharashtra)</option>
+                        <option value="Aurangabad (Maharashtra)">Aurangabad (Maharashtra)</option>
+                        <option value="Bhiwandi (Maharashtra)">Bhiwandi (Maharashtra)</option>
+                        <option value="Bhusawal (Maharashtra)">Bhusawal (Maharashtra)</option>
+                        <option value="Chandrapur (Maharashtra)">Chandrapur (Maharashtra)</option>
+                        <option value="Dhule (Maharashtra)">Dhule (Maharashtra)</option>
+                        <option value="Ichalkaranji (Maharashtra)">Ichalkaranji (Maharashtra)</option>
+                        <option value="Jalgaon (Maharashtra)">Jalgaon (Maharashtra)</option>
+                        <option value="Jalna (Maharashtra)">Jalna (Maharashtra)</option>
+                        <option value="Kalyan-Dombivli (Maharashtra)">Kalyan-Dombivli (Maharashtra)</option>
+                        <option value="Kolhapur (Maharashtra)">Kolhapur (Maharashtra)</option>
+                        <option value="Latur (Maharashtra)">Latur (Maharashtra)</option>
+                        <option value="Malegaon (Maharashtra)">Malegaon (Maharashtra)</option>
+                        <option value="Mira-Bhayandar (Maharashtra)">Mira-Bhayandar (Maharashtra)</option>
+                        <option value="Mumbai (Maharashtra)">Mumbai (Maharashtra)</option>
+                        <option value="Nagpur (Maharashtra)">Nagpur (Maharashtra)</option>
+                        <option value="Nanded (Maharashtra)">Nanded (Maharashtra)</option>
+                        <option value="Nashik (Maharashtra)">Nashik (Maharashtra)</option>
+                        <option value="Navi Mumbai (Maharashtra)">Navi Mumbai (Maharashtra)</option>
+                        <option value="Panvel (Maharashtra)">Panvel (Maharashtra)</option>
+                        <option value="Parbhani (Maharashtra)">Parbhani (Maharashtra)</option>
+                    <option value="Pimpri-Chinchwad (Maharashtra)">Pimpri-Chinchwad (Maharashtra)</option>
+                        <option value="Pune (Maharashtra)">Pune (Maharashtra)</option>
+            <option value="Sangli-Miraj & Kupwad (Maharashtra)">Sangli-Miraj & Kupwad (Maharashtra)</option>
+                        <option value="Satara (Maharashtra)">Satara (Maharashtra)</option>
+                        <option value="Solapur (Maharashtra)">Solapur (Maharashtra)</option>
+                        <option value="Thane (Maharashtra)">Thane (Maharashtra)</option>
+                        <option value="Ulhasnagar (Maharashtra)">Ulhasnagar (Maharashtra)</option>
+                        <option value="Vasai-Virar (Maharashtra)">Vasai-Virar (Maharashtra)</option>
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Manipur">
+                                <option>Manipur</option>	
+                                <option value="Imphal (Manipur)">Imphal (Manipur)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Mizoram">
+                                <option>Mizoram</option>	
+                                <option value="Aizawl (Mizoram)">Aizawl (Mizoram)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Odisha">
+                                <option>Odisha</option>	
+                                <option value="Berhampur (Odisha)">Berhampur (Odisha)</option>
+                <option value="Bhubaneswar (Odisha)">Bhubaneswar (Odisha)</option>
+                <option value="Cuttack (Odisha)">Cuttack (Odisha)</option>
+            <option value="Raurkela Industrial Township (Odisha)">Raurkela Industrial Township (Odisha)</option>
+                <option value="Rourkela (Odisha)">Rourkela (Odisha)</option>
+                <option value="Sambalpur (Odisha)">Sambalpur (Odisha)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Puducherry">
+                                <option>Puducherry</option>	
+                                <option value="Ozhukarai (Puducherry)">Ozhukarai (Puducherry)</option>
+                                <option value="Pondicherry (Puducherry)">Pondicherry (Puducherry)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Punjab">
+                                <option>Punjab</option>	
+                                <option value="Amritsar (Punjab)">Amritsar (Punjab)</option>
+                                <option value="Bathinda (Punjab)">Bathinda (Punjab)</option>
+                                <option value="Chandigarh (Punjab)">Chandigarh (Punjab)</option>
+                                <option value="Jalandhar (Punjab)">Jalandhar (Punjab)</option>
+                                <option value="Ludhiana (Punjab)">Ludhiana (Punjab)</option>
+                                <option value="Patiala (Punjab)">Patiala (Punjab)</option>
+                                <option value="Phagwara (Punjab)">Phagwara (Punjab)</option>
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Rajasthan">
+                                <option>Rajasthan</option>	
+                                <option value="Ajmer (Rajasthan)">Ajmer (Rajasthan)</option>
+                            <option value="Alwar (Rajasthan)">Alwar (Rajasthan)</option>
+                            <option value="Bharatpur (Rajasthan)">Bharatpur (Rajasthan)</option>
+                            <option value="Bhilwara (Rajasthan)">Bhilwara (Rajasthan)</option>
+                            <option value="Bikaner (Rajasthan)">Bikaner (Rajasthan)</option>
+                            <option value="Jaipur (Rajasthan)">Jaipur (Rajasthan)</option>
+                            <option value="Jodhpur (Rajasthan)">Jodhpur (Rajasthan)</option>
+                            <option value="Kota (Rajasthan)">Kota (Rajasthan)</option>
+                            <option value="Pali (Rajasthan)">Pali (Rajasthan)</option>
+                            <option value="Sikar (Rajasthan)">Sikar (Rajasthan)</option>
+                            <option value="Sri Ganganagar (Rajasthan)">Sri Ganganagar (Rajasthan)</option>
+                            <option value="Udaipur (Rajasthan)">Udaipur (Rajasthan)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Sikkim">
+                                <option>Sikkim</option>	
+                                <option value="Gangtok (Sikkim)">Gangtok (Sikkim)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Tamil Nadu">
+                                <option>Tamil Nadu</option>	
+                                <option value="Ambattur (Tamil Nadu)">Ambattur (Tamil Nadu)</option>
+                            <option value="Avadi (Tamil Nadu)">Avadi (Tamil Nadu)</option>
+                            <option value="Chennai (Tamil Nadu)">Chennai (Tamil Nadu)</option>
+                            <option value="Coimbatore (Tamil Nadu)">Coimbatore (Tamil Nadu)</option>
+                            <option value="Dindigul (Tamil Nadu)">Dindigul (Tamil Nadu)</option>
+                            <option value="Erode (Tamil Nadu)">Erode (Tamil Nadu)</option>
+                            <option value="Hosur (Tamil Nadu)">Hosur (Tamil Nadu)</option>
+                            <option value="Karaikudi (Tamil Nadu)">Karaikudi (Tamil Nadu)</option>
+                            <option value="Kumbakonam (Tamil Nadu)">Kumbakonam (Tamil Nadu)</option>
+                            <option value="Madurai (Tamil Nadu)">Madurai (Tamil Nadu)</option>
+                            <option value="Nagercoil (Tamil Nadu)">Nagercoil (Tamil Nadu)</option>
+                            <option value="Pallavaram (Tamil Nadu)">Pallavaram (Tamil Nadu)</option>
+                            <option value="Pudukkottai (Tamil Nadu)">Pudukkottai (Tamil Nadu)</option>
+                            <option value="Salem (Tamil Nadu)">Salem (Tamil Nadu)</option>
+                            <option value="Thanjavur (Tamil Nadu)">Thanjavur (Tamil Nadu)</option>
+                            <option value="Thoothukudi (Tamil Nadu)">Thoothukudi (Tamil Nadu)</option>
+                        <option value="Tiruchirappalli (Tamil Nadu)">Tiruchirappalli (Tamil Nadu)</option>
+                            <option value="Tirunelveli (Tamil Nadu)">Tirunelveli (Tamil Nadu)</option>
+                            <option value="Tiruppur (Tamil Nadu)">Tiruppur (Tamil Nadu)</option>
+                            <option value="Tiruvottiyur (Tamil Nadu)">Tiruvottiyur (Tamil Nadu)</option>
+                            <option value="Vellore (Tamil Nadu)">Vellore (Tamil Nadu)</option>
+            
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Telangana">
+                                <option>Telangana</option>	
+                                <option value="Hyderabad (Telangana)">Hyderabad (Telangana)</option>
+                            <option value="Karimnagar (Telangana)">Karimnagar (Telangana)</option>
+                            <option value="Khammam (Telangana)">Khammam (Telangana)</option>
+                            <option value="Mahbubnagar (Telangana)">Mahbubnagar (Telangana)</option>
+                            <option value="Miryalaguda (Telangana)">Miryalaguda (Telangana)</option>
+                            <option value="Nizamabad (Telangana)">Nizamabad (Telangana)</option>
+                            <option value="Ramagundam (Telangana)">Ramagundam (Telangana)</option>
+                            <option value="Secunderabad (Telangana)">Secunderabad (Telangana)</option>
+                            <option value="Suryapet (Telangana)">Suryapet (Telangana)</option>
+                            <option value="Warangal (Telangana)">Warangal (Telangana)</option>
+            
+            
+                                </optgroup>
+            
+            
+                                <optgroup label="Tripura">
+                                <option>Tripura</option>	
+                                <option value="Agartala (Tripura)">Agartala (Tripura)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Uttar Pradesh">
+                                <option>Uttar Pradesh</option>	
+                                <option value="Agra (Uttar Pradesh)">Agra (Uttar Pradesh)</option>
+            <option value="Aligarh (Uttar Pradesh)">Aligarh (Uttar Pradesh)</option>
+            <option value="Allahabad (Uttar Pradesh)">Allahabad (Uttar Pradesh)</option>
+            <option value="Amroha (Uttar Pradesh)">Amroha (Uttar Pradesh)</option>
+            <option value="Bahraich (Uttar Pradesh)">Bahraich (Uttar Pradesh)</option>
+            <option value="Ballia (Uttar Pradesh)">Ballia (Uttar Pradesh)</option>
+            <option value="Bareilly (Uttar Pradesh)">Bareilly (Uttar Pradesh)</option>
+            <option value="Bulandshahr (Uttar Pradesh)">Bulandshahr (Uttar Pradesh)</option>
+            <option value="Etawah (Uttar Pradesh)">Etawah (Uttar Pradesh)</option>
+            <option value="Farrukhabad (Uttar Pradesh)">Farrukhabad (Uttar Pradesh)</option>
+            <option value="Fatehpur (Uttar Pradesh)">Fatehpur (Uttar Pradesh)</option>
+            <option value="Firozabad (Uttar Pradesh)">Firozabad (Uttar Pradesh)</option>
+            <option value="Ghaziabad (Uttar Pradesh)">Ghaziabad (Uttar Pradesh)</option>
+            <option value="Gorakhpur (Uttar Pradesh)">Gorakhpur (Uttar Pradesh)</option>
+            <option value="Hapur (Uttar Pradesh)">Hapur (Uttar Pradesh)</option>
+            <option value="Jaunpur (Uttar Pradesh)">Jaunpur (Uttar Pradesh)</option>
+            <option value="Jhansi (Uttar Pradesh)">Jhansi (Uttar Pradesh)</option>
+            <option value="Kanpur (Uttar Pradesh)">Kanpur (Uttar Pradesh)</option>
+            <option value="Khora, Ghaziabad (Uttar Pradesh)">Khora, Ghaziabad (Uttar Pradesh)</option>
+            <option value="Loni (Uttar Pradesh)">Loni (Uttar Pradesh)</option>
+            <option value="Lucknow (Uttar Pradesh)">Lucknow (Uttar Pradesh)</option>
+            <option value="Mathura (Uttar Pradesh)">Mathura (Uttar Pradesh)</option>
+            <option value="Mau (Uttar Pradesh)">Mau (Uttar Pradesh)</option>
+            <option value="Meerut (Uttar Pradesh)">Meerut (Uttar Pradesh)</option>
+            <option value="Mirzapur (Uttar Pradesh)">Mirzapur (Uttar Pradesh)</option>
+            <option value="Moradabad (Uttar Pradesh)">Moradabad (Uttar Pradesh)</option>
+            <option value="Muzaffarnagar (Uttar Pradesh)">Muzaffarnagar (Uttar Pradesh)</option>
+            <option value="Noida (Uttar Pradesh)">Noida (Uttar Pradesh)</option>
+            <option value="Orai (Uttar Pradesh)">Orai (Uttar Pradesh)</option>
+            <option value="Raebareli (Uttar Pradesh)">Raebareli (Uttar Pradesh)</option>
+            <option value="Rampur (Uttar Pradesh)">Rampur (Uttar Pradesh)</option>
+            <option value="Saharanpur (Uttar Pradesh)">Saharanpur (Uttar Pradesh)</option>
+            <option value="Sambhal (Uttar Pradesh)">Sambhal (Uttar Pradesh)</option>
+            <option value="Shahjahanpur (Uttar Pradesh)">Shahjahanpur (Uttar Pradesh)</option>
+            <option value="Unnao (Uttar Pradesh)">Unnao (Uttar Pradesh)</option>
+            <option value="Varanasi (Uttar Pradesh)">Varanasi (Uttar Pradesh)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="Uttarakhand">
+                                <option>Uttarakhand</option>	
+                                <option value="Dehradun (Uttarakhand)">Dehradun (Uttarakhand)</option>
+                                <option value="Haridwar (Uttarakhand)">Haridwar (Uttarakhand)</option>
+            
+            
+                                </optgroup>
+            
+            
+            
+                                <optgroup label="West Bengal">
+                                <option>West Bengal</option>	
+                                <option value="Asansol (West Bengal)">Asansol (West Bengal)</option>
+                        <option value="Bally (West Bengal)">Bally (West Bengal)</option>
+                        <option value="Baranagar (West Bengal)">Baranagar (West Bengal)</option>
+                        <option value="Barasat (West Bengal)">Barasat (West Bengal)</option>
+                        <option value="Bardhaman (West Bengal)">Bardhaman (West Bengal)</option>
+                        <option value="Berhampore (West Bengal)">Berhampore (West Bengal)</option>
+                        <option value="Bhatpara (West Bengal)">Bhatpara (West Bengal)</option>
+                        <option value="Bidhannagar (West Bengal)">Bidhannagar (West Bengal)</option>
+                        <option value="Chinsurah (West Bengal)">Chinsurah (West Bengal)</option>
+                        <option value="Durgapur (West Bengal)">Durgapur (West Bengal)</option>
+                        <option value="Gopalpur (West Bengal)">Gopalpur (West Bengal)</option>
+                        <option value="Haldia (West Bengal)">Haldia (West Bengal)</option>
+                        <option value="Howrah (West Bengal)">Howrah (West Bengal)</option>
+                        <option value="Kamarhati (West Bengal)">Kamarhati (West Bengal)</option>
+                        <option value="Kharagpur (West Bengal)">Kharagpur (West Bengal)</option>
+                        <option value="Kolkata (West Bengal)">Kolkata (West Bengal)</option>
+                        <option value="Kulti (West Bengal)">Kulti (West Bengal)</option>
+                        <option value="Madhyamgram (West Bengal)">Madhyamgram (West Bengal)</option>
+                        <option value="Maheshtala (West Bengal)">Maheshtala (West Bengal)</option>
+                        <option value="Malda (West Bengal)">Malda (West Bengal)</option>
+                        <option value="Naihati (West Bengal)">Naihati (West Bengal)</option>
+                        <option value="North Dumdum (West Bengal)">North Dumdum (West Bengal)</option>
+                        <option value="Panihati (West Bengal)">Panihati (West Bengal)</option>
+                        <option value="Raiganj (West Bengal)">Raiganj (West Bengal)</option>
+                        <option value="Rajpur Sonarpur (West Bengal)">Rajpur Sonarpur (West Bengal)</option>
+                        <option value="Serampore (West Bengal)">Serampore (West Bengal)</option>
+                        <option value="Siliguri (West Bengal)">Siliguri (West Bengal)</option>
+                        <option value="South Dumdum (West Bengal)">South Dumdum (West Bengal)</option>
+                        <option value="Uluberia (West Bengal)">Uluberia (West Bengal)</option>
+            
+            
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>	
+                </div>
+
+
+                <!-- Multi select ends -->
+                
+
+            <div class="marketing-section" id="facebook-marketing-section">
+
+                <div class="marketing-section-1" id="facebook-marketing-section-1">
+
+                    <h1>Facebook Marketing:</h1>
+                </div>
+                
+                <div class="marketing-section-2" id="facebook-marketing-section-2">
+                    <div class="setClass-1">
+                    <label for="facebook-price">Price per Day</label> 
+                    <input type="number" name="facebook_price" class="input_prices" id="facebook_price" min="400" onkeyup="fbtotal()" onchange="fbtotal()" >
+                    <p class="fb-price"></p>
+                    </div>
+
+                    <div class="setClass-2">
+
+                    <label for="facebook-marketing-days">No. of Days</label> 
+                    <select name="facebook-marketing-days" class="marketing-days" id="facebook-marketing-days" style="width: 21%; height: 5%" onchange="fbtotal()">
+                        <option class="0-days">Days</option>
+                        <option value="7" class="7-days">7 Days</option>
+                        <option value="15" class="15-days">15 Days</option>
+                        <option value="30" class="30-days">1 Month</option>
+                        <option value="90" class="90-days">3 Months</option>
+                        <option value="180" class="180-days">6 Months</option>
+                        <option value="360" class="360-days">12 Months</option>
+                    </select>
+
+                    </div>
+                    
+                    <div class="setClass-3">
+                    <label for="total-facebook-price">Total Price:</label>
+                    <input type="number" name="total_facebook_price" class="total" id="facebook_total">
+                    </div>    
+                </div>
+                
+            </div>
+
+
+            <div class="marketing-section" id="linkedin-marketing-section">
+
+                <div class="marketing-section-1" id="linkedin-marketing-section-1">
+                
+                    <h1>Linkedin Marketing:</h1>
+                </div>
+                
+                <div class="marketing-section-2" id="linkedin-marketing-section-2">
+
+                    <div class="setClass-1">
+                    <label for="linkedin-price">Price per Day</label> 
+                    <input type="number" name="linkedin_price" class="input_prices" id="linkedin_price" min="500" onkeyup="linktotal()" onchange="linktotal()">
+                    <p class="link-price"></p>
+                    </div>
+
+                    <div class="setClass-2">
+
+                    <label for="linkedin-marketing-days">No. Of Days</label>
+                    <select name="linkedin-marketing-days" class="marketing-days" id="linkedin-marketing-days" style="width: 21%; height: 5%" onchange="linktotal()">
+                        <option class="0-days">Days</option>
+                        <option value="7" class="7-days">7 Days</option>
+                        <option value="15" class="15-days">15 Days</option>
+                        <option value="30" class="30-days">1 Month</option>
+                        <option value="90" class="90-days">3 Months</option>
+                        <option value="180" class="180-days">6 Months</option>
+                        <option value="360" class="360-days">12 Months</option>
+                    </select>
+
+                </div>
+
+                <div class="setClass-3">
+                    <label for="total-linkedin-price">Total Price:</label> 
+                    <input type="number" name="total_linkedin_price" class="total" id="linkedin_total">
+
+                </div>
+                </div>    
+            </div>
+
+
+                
+            <div class="marketing-section" id="instagram-marketing-section">
+
+                <div class="marketing-section-1" id="instagram-marketing-section-1">
+
+                <h1>Instagram Marketing:</h1>
+
+                </div>
+
+                <div class="marketing-section-2" id="instagram-marketing-section-2">
+                
+                <div class="setClass-1">    
+
+                <label for="instagram-price">Price per Day</label> 
+                <input type="number" name="instagram_price" class="input_prices" id="instagram_price" min="500" onkeyup="instatotal()" onchange="instatotal()">
+                <p class="insta-price"></p>
+
+            </div>  
+
+
+                <div class="setClass-2">
+                <label for="instagram-marketing-days">No. Of Days</label>
+                <select name="instagram-marketing-days" class="marketing-days" id="instagram-marketing-days" style="width: 21%; height: 5%" onchange="instatotal()">
+                    <option class="0-days">Days</option>
+                    <option value="7" class="7-days">7 Days</option>
+                    <option value="15" class="15-days">15 Days</option>
+                    <option value="30" class="30-days">1 Month</option>
+                    <option value="90" class="90-days">3 Months</option>
+                    <option value="180" class="180-days">6 Months</option>
+                    <option value="360" class="360-days">12 Months</option>
+                </select>
+
+            </div>
+
+                <div class="setClass-3">
+                <label for="total-instagram-price">Total Price:</label> 
+                <input type="number" name="total_instagram_price" class="total" id="instagram_total">
+            </div>
+
+                </div>
+
+            </div>    
+
+
+
+            
+            
+            <div class="marketing-section" id="pinterest-marketing-section">
+
+
+                <div class="marketing-section-1" id="pinterest-marketing-section-1">
+                
+                <h1>Pinterest Marketing:</h1>
+
+                </div>
+
+                
+
+                <div class="marketing-section-2" id="pinterest-marketing-section-2">
+
+                    <div class="setClass-1">   
+
+                <label for="pinterest-price">Price per Day</label> 
+                <input type="number" name="pinterest_price" class="input_prices" id="pinterest_price" min="500" onkeyup="pintotal()" onchange="pintotal()">
+                <p class="pin-price"></p>
+
+                </div>
+
+                <div class="setClass-2">
+
+                <label for="pinterest-marketing-days">No. Of Days</label>
+                <select name="pinterest-marketing-days" class="marketing-days" id="pinterest-marketing-days" style="width: 21%; height: 5%" onchange="pintotal()">
+                    <option class="0-days">Days</option>
+                    <option value="7" class="7-days">7 Days</option>
+                    <option value="15" class="15-days">15 Days</option>
+                    <option value="30" class="30-days">1 Month</option>
+                    <option value="90" class="90-days">3 Months</option>
+                    <option value="180" class="180-days">6 Months</option>
+                    <option value="360" class="360-days">12 Months</option>
+                </select>
+
+                </div>
+
+                <div class="setClass-3">
+                <label for="total-pinterest-price">Total Price:</label> 
+                <input type="number" name="total_pinterest_price" class="total" id="pinterest_total">
+            </div>   
+            </div>
+            
+            </div> 
+            
+            
+
+            <div class="marketing-section" id="email-marketing-section">
+
+                <div class="marketing-section-1" id="email-marketing-section-1">
+
+                <h1>Email Marketing:</h1>
+
+                </div>
+
+                <div class="marketing-section-2" id="email-marketing-section-2">
+
+                <div class="setClass-1">    
+
+                <label for="email-price">Price per Day</label> 
+                <input type="number" name="email_price" class="input_prices" id="email_price" min="500" onkeyup="emtotal()" onchange="emtotal()">
+                <p class="em-price"></p>
+
+                </div>
+
+                <div class="setClass-2">
+
+                <label for="email-marketing-days">No. Of Days</label>
+                <select name="email-marketing-days" class="marketing-days" id="email-marketing-days" style="width: 21%; height: 5%" onchange="emtotal()">
+                    <option class="0-days">Days</option>
+                    <option value="7" class="7-days">7 Days</option>
+                    <option value="15" class="15-days">15 Days</option>
+                    <option value="30" class="30-days">1 Month</option>
+                    <option value="90" class="90-days">3 Months</option>
+                    <option value="180" class="180-days">6 Months</option>
+                    <option value="360" class="360-days">12 Months</option>
+                </select>
+
+                </div>
+
+
+                <div class="setClass-3">
+                <label for="total-email-price">Total Price:</label> 
+                <input type="number" name="total_email_price" class="total" id="email_total">
+                </div>   
+            </div>
+
+            </div>    
+
+
+
+            <div class="marketing-section" id="seo-marketing-section">
+
+                <div class="marketing-section-1" id="seo-marketing-section-1">
+
+                <h1>SEO Marketing:</h1>
+
+                </div>
+
+                <div class="marketing-section-2" id="seo-marketing-section-2">
+
+                    <div class="setClass-1">
+
+                <label for="seo-price">Price per Day</label> 
+                <input type="number" name="seo_price" class="input_prices" id="seo_price" min="500" onkeyup="setotal()" onchange="setotal()">
+                <p class="se-price"></p>
+
+            </div>
+
+                <div class="setClass-2">
+
+                <label for="seo-marketing-days">No. Of Days</label>
+                <select name="seo-marketing-days" class="marketing-days" id="seo-marketing-days" style="width: 21%; height: 5%" onchange="setotal()">
+                    <option class="0-days">Days</option>
+                    <option value="7" class="7-days">7 Days</option>
+                    <option value="15" class="15-days">15 Days</option>
+                    <option value="30" class="30-days">1 Month</option>
+                    <option value="90" class="90-days">3 Months</option>
+                    <option value="180" class="180-days">6 Months</option>
+                    <option value="360" class="360-days">12 Months</option>
+                </select>
+
+            </div>
+
+                <div class="setClass-3">
+                <label for="total-seo-price">Total Price:</label> 
+                <input type="number" name="total_seo_price" class="total" id="seo_total">
+                </div>
+
+            </div>
+
+            </div> 
+            
+            
+
+            
+
+            <div class="marketing-section" id="smo-marketing-section">
+
+                <div class="marketing-section-1" id="smo-marketing-section-1">
+
+                <h1>SMO Marketing:</h1>
+
+                </div>
+
+                <div class="marketing-section-2" id="smo-marketing-section-2">
+
+                    <div class="setClass-1">
+                <label for="smo-price">Price per Day</label> 
+                <input type="number" name="smo_price" class="input_prices" id="smo_price" min="500" onkeyup="smtotal()" onchange="smtotal()">
+                <p class="sm-price"></p>
+                    </div>
+
+                 <div class="setClass-2">   
+                <label for="smo-marketing-days">No. Of Days</label>
+                <select name="smo-marketing-days" class="marketing-days" id="smo-marketing-days" style="width: 21%; height: 5%" onchange="smtotal()">
+                    <option class="0-days">Days</option>
+                    <option value="7" class="7-days">7 Days</option>
+                    <option value="15" class="15-days">15 Days</option>
+                    <option value="30" class="30-days">1 Month</option>
+                    <option value="90" class="90-days">3 Months</option>
+                    <option value="180" class="180-days">6 Months</option>
+                    <option value="360" class="360-days">12 Months</option>
+                </select>
+
+            </div>
+
+            <div class="setClass-3">
+                <label for="total-smo-price">Total Price:</label> 
+                <input type="number" name="total_smo_price" class="total" id="smo_total">
+            </div>
+            </div>
+
+            </div>    
+
+
+                <input type="submit" value="Submit" class="submit" id="submit">
+                
+
+            </form>
+        </div>
+
+        <div class="total-container">
+            <h1 class="total_amount"></h1>
+        </div>
+        
+    </div>
+
+    
+
+    
+    
+    <!-- footer starts -->
+
+    <%- include('footer.ejs') %>
+
+    <!-- footer ends -->
+    
+<!-- <script>
+    
+    $('#facebook_marketing').on("input", function() {
+    $('.output-facebook').val(this.value );
+    }).trigger("change");
+
+    
+    $('#linkedin_marketing').on("input", function() {
+    $('.linkedin_marketing').val(this.value );
+    }).trigger("change");
+
+    $('#instagram_marketing').on("input", function() {
+    $('.instagram_marketing').val(this.value );
+    }).trigger("change");
+
+    $('#email_marketing').on("input", function() {
+    $('.email_marketing').val(this.value );
+    }).trigger("change");
+
+    $('#seo').on("input", function() {
+    $('.seo').val(this.value );
+    }).trigger("change");
+
+    $('#smo').on("input", function() {
+    $('.smo').val(this.value );
+    }).trigger("change");
+
+    
+</script> -->
+<script src="/js/campaign-register.js"></script> 
+<script src="/js/header_updated_n.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/tail.select-full.min.js"></script>
+
+<script>
+	tail.select('#select', {
+		search: true,
+		descriptions: true,
+		hideSelected: true,
+		hideDisabled: true,
+		multiLimit: Infinity,
+		multiShowCount: true,
+		multiContainer: true,
+		searchFocus: true,
+		searchConfig: [".optgrp"]
+	});
+</script>
+
+</body>
+
+</html>

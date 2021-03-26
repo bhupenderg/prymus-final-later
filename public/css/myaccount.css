@@ -1,0 +1,119 @@
+.myaccount-dashboard{
+    width: 100%;
+    height: 100vh;
+    margin-top: 10%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myaccount-dashboard .welcome-note{
+    width: 80%;
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ff4f03;
+    align-items: center;
+    
+}
+
+.myaccount-dashboard .welcome-note h1{
+    font-size: 2vw;
+
+}
+
+.myaccount-dashboard .data-container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000;
+    align-items: center;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid #fff;;
+}
+
+
+.data-container .data-container_one{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+
+.data-container .data-container_one h2{
+    width: 50rem;
+    height: 18rem;
+    border: 5px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}
+.data-container .data-container_one h2:hover{
+    transform: translateY(-16px);
+    background: #ff4f03;
+    border: 2px solid #ff4f03;
+    border: 10px solid #000;
+}
+
+.data-container .data-container_one h2:active{
+    transform: translateY(1px);
+    
+    
+
+}
+
+.data-container .data-container_one h2 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.data-container .data-container_one h2:hover a{
+    color: #000;
+}
+
+
+.data-container .data-container_two{
+    width: 70%;
+    transform: translateX(25%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+ }
+
+ .data-container .data-container_two .choices-two{
+
+ }  
+
+ .data-container .data-container_two .choices-two a{
+     text-decoration: none;
+     color: #ff4f03;
+     font-size: 2.5vw;
+ }
+ 
+ .data-container .data-container_two .choices-two a:hover{
+    
+    color: #fff;
+    font-size: 3vw;
+}
+
+.myaccount-animate{
+    transform: translateY(-50rem);
+    transition: ease-in;
+}
+
+.previous_orders_section{
+    width: 100vw;
+    height: 120%;
+    background: green;
+    transform: translateY(30rem);
+}

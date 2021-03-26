@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="/css/header_updated_n.css">
+    <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/myaccount.css">
+    
+    <link rel="stylesheet" href="/css/seo.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <title>PRYMUS</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+</head>
+<body>
+
+    <% if (user) { %>
+        <%- include ('../includes/header_updated_s.ejs') %>     
+    <% } else { %>
+        <div class="header-main">
+            <%- include ('../includes/header_updated_n.ejs') %>
+        </div>     
+    
+    <% } %>
+    <div class="myaccount-dashboard">
+        <div class="welcome-note">
+            <h1 class="welcome">Welcome <%= user.username %></h1>
+            
+        </div>
+        <div class="data-container">
+            <div class="data-container_one">
+                <h2 class="choices-one createPlan"><a href="/campaignregister">Customize Your Plan</a></h2>
+                <h2 class="choices-one currentPlan"><a href="/myplan">Current Plans</a></h2>
+                <h2 class="choices-one previousOrders"><a class="previous_orders" href="#">Previous Orders</a></h2>
+                <h2 class="choices-one rewards"><a href="#">Reward Points Earned</a></h2>
+                <h2 class="choices-one complaints"><a href="#">Complaints</a></h2>
+            </div>
+            <div class="data-container_two">
+                <h2 class="choices-two newsletter"><a href="#">Subscribe For Newsletter</a></h2>
+                <h2 class="choices-two subscribeEmail"><a href="#">Email Subscribe</a></h2>
+                <h2 class="choices-two successStories"><a href="#">Our Success Stories</a></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="previous_orders_section">
+        <h1>Hello Ladies</h1>
+    </div>
+
+    <!-- footer starts -->
+
+    <%- include('../footer.ejs') %>
+    <% if (user) { %>
+        <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
+        <script src="/socket.io/socket.io.js"></script>
+    <% } %>
+
+ 
+<script src="/js/chat.js"></script>
+
+    <!-- footer ends -->
+
+
+
+        <script>
+        const previous_orders = document.querySelector('.previous_orders')
+        const previous_orders_section = document.querySelector('.previous_orders_section')
+        previous_orders.addEventListener('click', () => {
+            previous_orders_section.classList.add('.myaccount-animate')
+           
+        })
+    </script>
+    <script src="/js/header_updated_n.js"></script>
+
+</body>
+</html>

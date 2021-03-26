@@ -1,0 +1,188 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+
+.navbar{
+	width: 100%;
+	/*height: 30%;*/
+	/* margin-top: 3rem; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+	color: black;	
+	position: fixed;
+    top: -1.6vw;
+    z-index: 1000;
+
+}
+
+.prymus-logo{
+	font-size: 2rem;
+	margin: 3rem !important;
+}
+
+.navbar-links ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+    margin-top: 7rem;
+}
+
+.navbar-links ul li{
+    list-style: none;
+    margin-left: 3rem;
+}
+
+.navbar-links ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 1rem;
+	display: block;
+	color: #000;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+
+}
+
+
+.navbar-links ul li a:hover{
+	color: #ff4f03;
+
+}
+
+.toggle-button{
+	position: absolute;
+	top: 3rem !important;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 26px;
+	
+    
+}
+
+.toggle-button .bar{
+	height: 6px;
+	width: 52px;
+	background: black;
+    border-radius: 8vw;
+    /* padding-top: 2rem; */
+}
+
+.connect{
+	padding: 1.5rem 3rem !important;
+	border: 3px solid #ff4f03;
+	border-radius: 50px;
+    transform: translateY(-20%);
+    margin-right: 2rem;
+}
+
+.connect:hover{
+	background: #ff4f03;
+	color: #fff !important;
+}
+
+
+@media (max-width: 1350px) {
+
+    .navbar{
+		position: fixed;
+		
+		top: -30px;
+		width: 50%;
+	}
+	
+	.navbar-links{
+		height: 30% !important;
+	}
+    
+    .prymus-logo img{
+        width: 350px !important;
+    }
+    .toggle-button{
+        display: flex;
+        margin-top: 9rem !important;
+        margin-right: 6rem;
+        width: 40px;
+        height: 36px;
+	}
+
+	.navbar-links{
+		display: none;
+		width: 100%;
+	}
+
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.navbar-links ul {
+		flex-direction: column;
+		width: 100%;
+        background: #000;
+        
+    
+
+	}
+	.navbar-links ul li {
+        text-align: center;
+        margin-right: 11.5px;
+	}
+
+	.navbar-links ul li a{
+        color: white;
+        font-size: 3.2rem;
+	}
+
+	.navbar-links ul li a:hover{
+		color: #ff4f03;
+	}
+
+
+	.navbar-links ul li {
+		padding: .5rem 1rem;	
+	}
+
+	.active{
+		display: block;
+		
+	}
+	
+    
+    .connect{
+        padding: .8rem .2rem !important;
+        border: none;
+    }
+}
+
+@media (max-width: 750px){
+    .toggle-button{
+        display: flex;
+        margin-top: 3rem !important;
+        margin-right: 2rem;
+        width: 30px;
+        height: 26px;
+    }
+    .prymus-logo img{
+        width: 200px !important;
+    }
+
+    .navbar-links ul li a{
+        font-size: 2rem;
+    }
+
+    .connect{
+        padding: 1rem 1.2rem;
+        border: 2px solid #ff4f03;
+    }
+}
+
+
+

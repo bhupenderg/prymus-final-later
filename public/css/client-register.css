@@ -1,0 +1,94 @@
+.container-1{
+    width: 100vw;
+    height: 150vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+}
+
+.sign-up{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 5px solid #ff4f03;
+    margin-top: -55rem;
+}
+
+.sign-up h1{
+    font-size: 5rem;
+    color: #ff4f03;
+    margin-bottom: 5rem;
+}
+.sign-in{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50rem;
+}
+
+.sign-in h1{
+    font-size: 5rem;
+    color: #ff4f03;
+    margin-bottom: 6rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+form input{
+   width: 35rem;
+   height: 4rem;
+   margin-top: 1rem;
+   border: none;
+   border: 2px solid #929090;
+   border-radius: 50px;
+   font-size: 2rem;
+   text-align: justify;
+   padding: 1rem;
+   box-shadow: 2px 2px 0px 0px rgb(197, 195, 195);
+   z-index: 10;
+}
+
+form input:focus{
+    outline: none;
+    border: #ff4f03 3px solid;
+}
+
+form input::placeholder{
+    font-size: 1.6rem;
+    color: #01020e7e;
+}
+
+form input[type=submit]{
+    background: #fff;
+    color: #000;
+    border: 5px solid #ff4f03;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 22rem;
+    height: 6rem;
+    margin-top: 5rem;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 0px 0px rgb(197, 195, 195);
+}
+
+form input[type=submit]:hover{
+    background: #ff4f03;
+    color: #fff;
+}
+
+
+

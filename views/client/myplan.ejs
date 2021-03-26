@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Prymus- Marketing Blogs">
+        <meta name="author" content="Prymus">
+        <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+        <link rel="stylesheet" href="/css/header_updated_n.css">
+        <link rel="stylesheet" href="/css/header_updated_s.css">
+        <link rel="stylesheet" href="/css/myplan.css">
+        <link rel="stylesheet" href="/css/chat.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    
+        <title>PRYMUS</title>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+    </head>
+    <body>
+
+        <div class="header-main">
+            <% if (user) { %>
+                <%- include ('../includes/header_updated_s.ejs') %>     
+            <% } else { %>
+                <%- include ('../includes/header_updated_n.ejs') %>
+            <% } %>
+        </div>      
+    
+    <!-- container-1 -->
+
+    <div class="container-1">
+        <div class="headings-container">
+            <h1>Congratulations, you have successfully created your plan.</h1>
+            <h2>Your plans includes:</h2>
+        </div>
+
+    <% myplan.forEach(plan => { %>
+    
+    <div class="data-container">
+        <div class="data-name">
+            <h3>Facebook Marketing:</h3>
+            <h3>Linkedin Marketing:</h3>
+            <h3>Instagrm Marketing:</h3>
+            <h3>Email Marketing:</h3>
+            <h3>SEO:</h3>
+            <h3>SMO:</h3>
+        </div>
+        <div class="data-value">
+            <h3 class="fb_value"><%= plan.facebook_marketing %></h3>
+            <h3 class="lnk_value"><%= plan.linkedin_marketing %></h3>
+            <h3 class="insta_value"><%= plan.instagram_marketing %></h3>
+            <h3 class="email_value"><%= plan.email_marketing %></h3>
+            <h3 class="seo_value"><%= plan.seo %></h3>
+            <h3 class="smo_value"><%= plan.smo %></h3>
+
+        </div>
+    </div> 
+
+    <div class="total-amount">
+        <h2 style="color: #000; font-size: 2vw;">The total sum of your plan is Rs <%= plan.total %> </h2>
+    </div>
+
+    <div class="payment">
+        <form action="/meTrnPay" method="post">
+            <input type="hidden" value="WL0000000027698" id="mid" name="mid">
+            <input type="hidden" value="6375b97b954b37f956966977e5753ee6" id="encKey" name="encKey">
+            <input type="hidden" value="" id="hdnOrderID" name="hdnOrderID">
+            <input type="hidden" value="100" id="trnAmt" name="trnAmt">
+            <input type="hidden" value="INR" id="currency" name="currency">
+            <input type="hidden" value="S" id="meTransReqType" name="meTransReqType">
+            <input type="hidden" value="http://localhost:8000/meTrnSuccess" id="resUrl" name="resUrl">
+
+            <input type="submit" name="CHECKOUT" value="CHECKOUT" style="width: 100%;" />
+
+        </form>
+        
+    </div>
+
+
+    <% }) %>   
+
+
+        
+    </div>
+
+    <!-- footer starts -->
+
+    <%- include('../footer.ejs') %>
+    <% if (user) { %>
+        <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
+        <script src="/socket.io/socket.io.js"></script>
+    <% } %>
+
+<script src="/js/index.js"></script>  
+<script src="/js/chat.js"></script>
+
+    <!-- footer ends -->
+
+    <script>
+        let fb = document.querySelector('.fb_value').textContent
+        let link = document.querySelector('.lnk_value').textContent
+        let total = parseInt(fb) + parseInt(link)
+
+        let sum = document.querySelector('.sum').textContent = total
+        
+    </script>
+
+<script src="/js/header_updated_n.js"></script>
+</body>
+</html>

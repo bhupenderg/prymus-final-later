@@ -1,0 +1,562 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    font-family: Century Gothic, sans-serif;
+    line-height: 1.7;
+    color: #777;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    background-color: #fff;
+    
+}
+
+
+
+    .header-main{
+        height: 15%;
+        width: 100%;
+    }
+.seo-container-1{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.seo-container-1 .data-container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.seo-container-1 .data-container h1{
+    font-size: 3vw;
+    color: #000;
+    margin-left: 5%;
+    margin-right: 12%;
+}
+
+.seo-container-1 .data-container h1 span::after{
+    content: '';
+    animation: wordsChanger infinite 6s;
+
+}
+
+.seo-container-1 .image-container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+
+}
+.seo-container-1 .image-container img{
+    animation: seo-magic 2s ease-in;
+}
+
+
+/* trianlge */
+
+.seo-triangle-container{
+    width: 100%;
+    height: 40vh;
+    background: #000;
+    margin-top: -.2%;
+}
+
+.seo-triangle{
+        width: 100%;
+        height: 40vh;
+        background: #fff;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+}
+
+.seo-triangle h1{
+    text-transform: capitalize;
+    font-size: 5vw;
+    color: #ff4f03;
+    margin-bottom: 5%;
+}
+
+/* container-2 */
+
+.seo-container-2{
+    width: 100vw;
+    height: 120%;
+    background: black;
+    
+}
+
+.seo-container-2 .seo-timeline{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 12px solid #ff4f03;
+    margin-left: 5%;
+    padding-left: -50px;
+    
+}
+
+.seo-container-2 .seo-timeline .seo-timeline-sub{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15%;
+    position: relative;
+}
+
+.seo-container-2 .seo-timeline .seo-timeline-sub .seo-timeline-header{
+    width: 50%;
+    margin-left: -1%;
+    position: relative;
+    z-index: 10;
+}
+
+.seo-container-2 .seo-timeline .seo-timeline-sub .seo-timeline-header h1{
+    font-size: 1.7vw;
+    color: white;
+}
+.seo-container-2 .seo-timeline .seo-timeline-sub::before{
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ff4f03;
+    border-radius: 50%;
+    position: absolute;
+    left: -1.8%;
+    background: #ff4f03;
+    
+}
+
+.seo-container-2 .seo-timeline .seo-timeline-sub .seo-timeline-paragraph{
+    width: 40%;
+    font-size: 1.2vw;
+    margin-left: 2%;
+    
+}
+
+.para-color{
+    color: #ff4f03;
+    font-size: 1.8vw;
+}
+.para-white{
+    color: #fff;
+}
+
+/* Container-3 */
+
+.seo-container-3{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-30{
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seo-recent-stories{
+    width: 30%;
+    margin-bottom: 3rem;
+}
+
+.seo-recent-stories h1{
+    color: #ff4f03;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+}
+
+.seo-recent-stories p{
+    color: #000;
+    margin-bottom: 4rem;
+    
+}
+
+.seo-recent-stories a{
+    color: #ff4f03;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border: 2px solid black;
+    
+}
+
+.seo-insights-1{
+    width: 30%;
+}
+
+.seo-insights-2{
+    width: 30%;
+}
+
+/* container-4 */
+
+.seo-container-4{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-20rem);
+}
+
+.seo-image-container{
+    width: 50%;
+    transform: translateY(-10%);
+}
+
+.seo-connect-us{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.seo-connect-us h1{
+    text-transform: capitalize;
+    color: #ff4f03;
+    font-size: 2.5vw;
+    transform: translateY(-120%);
+}
+
+.seo-connect-us a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4vw;
+    border: 3px solid #000;
+    padding: 1.2rem 3.5rem;
+    transform: translateY(-70%);
+    border-radius: 50px;
+}
+
+.seo-connect-us a:hover{
+    color: #fff;
+    background: #ff4f03;
+    border: none;
+    transform: translateY(-70%);
+    border: 3px solid #ff4f03;
+}
+
+.footer-container{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    background: black;
+    font: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+
+
+@keyframes wordsChanger{
+    0% {
+        content: 'leads';
+        color: #ff4f30;
+        
+    }
+
+    20% {
+        content: 'users';
+        color: #ff4f03;
+    }
+
+    40% {
+        content: 'revenue';
+        color: #ff4f03;
+    }
+
+    60% {
+        content: 'sales';
+        color: #ff4f03;
+    }
+    
+    80% {
+        content: 'conversions';
+        color: #ff4f03;
+    }
+
+    100% {
+        content: 'leads';
+        color: #ff4f03;
+        
+    }
+}
+
+@keyframes seo-magic{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes seo-timeline{
+    0%{
+        opacity: 0;
+    }
+
+    30%{
+        opacity: 0;
+        transform: translateY(-80rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .seo-container-1{
+        width: 100%;
+        height: 120%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20rem;
+    }
+
+    .data-container{
+        margin-left: rem;
+        width: 100% !important;
+    }
+
+    .data-container h1{
+        font-size: 4.5rem !important;
+        text-align: center;
+    }
+
+    .image-container{
+        width: 100% !important;
+        
+    }
+    .seo-triangle-container{
+        
+    }
+
+    .seo-triangle{
+        height: 15rem;
+        margin-top: -5px;
+    }
+
+    .seo-container-2{
+        margin-top: -20rem;
+    }
+
+    .seo-container-2 .seo-timeline{
+        border-left: none !important;
+        flex-direction: column;
+    }
+
+    .seo-container-2 .seo-timeline .seo-timeline-sub{
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .seo-timeline-header{
+        width: 100%;
+    }
+    .seo-timeline-header h1{
+        width: 100% !important;
+        font-size: 3.5rem !important;
+        margin-left: -4rem !important;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .seo-timeline-header h1 span{
+        margin-left: 0 !important;
+    }
+
+    .seo-timeline-header p{
+        width: 100% !important;
+        font-size: 1.8rem !important;
+        margin-left: rem !important;
+        text-align: center;
+    }
+
+    .seo-timeline-paragraph{
+        width: 100% !important;
+        font-size: 2.6rem !important;
+        margin-left: -8rem !important;
+        text-align: center;
+        
+        
+
+    }
+    .para-color{
+        font-size: 3rem;
+    }
+
+    .seo-container-2 .seo-timeline .seo-timeline-sub::before{
+        display: none;
+        
+    }
+
+    .seo-container-4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seo-image-container{
+        width: 100%;
+        transform: translateY(-20rem);
+    }
+
+    .seo-connect-us{
+        width: 100%;
+    }
+
+    .seo-connect-us h1{
+        font-size: 3.5rem;
+        margin-top: -65rem;
+    }
+    .seo-connect-us a{
+        font-size: 2.6rem;
+        margin-top: 50rem;
+        
+    }
+
+}
+
+    @media only screen and (max-width: 750px) {
+        .data-container{
+            margin-top: -5rem;
+            
+        }
+        .data-container h1{
+            font-size: 2.3rem !important;
+        }
+
+        .image-container img{
+            width: 400px;
+        }
+
+        .seo-triangle{
+            margin-top: -1.5px;
+            height: 60px;
+        }
+
+        .seo-container-2{
+            text-align: left;
+            margin: 0 2px;
+            margin-top: -20rem;
+        }
+
+        .seo-container-2 .seo-timeline .seo-timeline-sub .seo-timeline-header{
+            width: 100% !important;
+                        
+        }
+        .seo-container-2 .seo-timeline .seo-timeline-sub .seo-timeline-header h1{
+            font-size: 2.5rem !important;
+            
+            text-align: center;
+            margin-left: -1.5rem !important;
+        }
+
+       .seo-timeline-paragraph{
+           font-size: 1.5rem !important;
+       }
+
+       .para-color{
+           font-size: 2rem !important;
+           margin-left: 4.5rem !important;
+       }
+       .para-white{
+        font-size: 1.5rem !important;
+        margin-left: 4.5rem !important;
+
+       }
+
+       .seo-container-4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seo-image-container{
+        margin-top: 10rem;
+        width: 100%;
+        transform: translateY(-10rem);
+        
+    }
+
+    .seo-image-container img{
+        width: 450px;
+        transform: translateX(-8rem);
+    }
+
+    .seo-connect-us{
+        width: 100%;
+        text-align: center;
+    }
+
+    .seo-connect-us h1{
+        font-size: 3rem;
+        margin-top: -42rem;
+    }
+    .seo-connect-us a{
+        font-size: 1.6rem;
+        margin-top: 25rem;
+        
+    }
+        
+
+    }
